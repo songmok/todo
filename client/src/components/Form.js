@@ -7,21 +7,21 @@ const Form = ({ todoValue, setTodoValue, addTodo }) => {
   };
   return (
     <div>
-      <from style={{ display: "flex" }}>
+      <form className="flex pt-2">
         <input
-          style={{ flex: "10" }}
           type="text"
           placeholder="할 일을 입력하세요"
+          className="w-full px-3 py-2 mr-4 text-gray-500 border rounded shadow"
           value={todoValue}
           onChange={addTodoSubmit}
-        />
+        ></input>
         <input
-          style={{ flex: "1" }}
           type="submit"
           onClick={addTodo}
           onSubmit={addTodo}
-        />
-      </from>
+          className="p-2 text-blue-400 border-2 border-blue-400 rounded hover:text-white hover:bg-blue-400"
+        ></input>
+      </form>
     </div>
   );
 };

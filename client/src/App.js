@@ -51,9 +51,8 @@ export default function App() {
 
   return (
     <div className="flex items-center justify-center w-screen h-screen ">
-     
-      <div>
-        <div>
+      <div className="w-full p-[100px] m-[400] bg-white rounded shadow lg:w-3/4">
+        <div className="">
           <h1>할일 목록</h1>
         </div>
         <List todoData={todoData} setTodoData={setTodoData} />

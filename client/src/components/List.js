@@ -39,7 +39,7 @@ const List = ({ todoData, setTodoData }) => {
     setTodoData(updateTodo);
   };
   return (
-    <div>
+    <div className="w-full px-4 py-1my2 text-gray-50" border rounded>
       {todoData.map((item) => (
         // item = { id: 1, title: "할일 1", completed: false },
         // item = { id: 2, title: "할일 2", completed: false },
@@ -51,10 +51,9 @@ const List = ({ todoData, setTodoData }) => {
             defaultChecked={item.completed}
             onChange={() => toggleClick(item.id)}
           />
+          <div className={"item.contex" ? "link-through" : "none"}></div>
           {item.title}
-          <button style={btnStyle} onClick={() => deleteClick(item.id)}>
-            x
-          </button>
+          <button onClick={() => deleteClick(item.id)}>x</button>x
         </div>
       ))}
     </div>
